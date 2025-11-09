@@ -1,1 +1,1 @@
-lab assignment krmu web dev lab-1
+lab assignment krmu web dev 1
