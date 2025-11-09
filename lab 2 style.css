@@ -1,0 +1,129 @@
+/* Global */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background: #f4f6fa;
+    color: #1d1d1d;
+}
+
+h1, h2 {
+    color: #2a4d8f;
+}
+
+/* Skip link */
+.skip {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background: #2a4d8f;
+    color: white;
+    padding: 8px 12px;
+}
+.skip:focus {
+    top: 10px;
+}
+
+/* Header */
+header {
+    background: #2a4d8f;
+    padding: 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+header nav a:hover {
+    background: #1b2f63;
+}
+
+/* Hero Section */
+#hero {
+    padding: 50px;
+    text-align: center;
+    background: #e8eef7;
+}
+
+/* Sections */
+section {
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+/* About Image */
+#about img {
+    display: block;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Skills Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background: #2a4d8f;
+    color: white;
+    padding: 12px;
+}
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+tr:nth-child(even) {
+    background: #e8eef7;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+}
+
+button {
+    width: 140px;
+    padding: 10px;
+    background: #2a4d8f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+button:hover {
+    background: #1b2f63;
+}
+
+/* Visual Separator */
+hr {
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 40px auto;
+    width: 80%;
+}
