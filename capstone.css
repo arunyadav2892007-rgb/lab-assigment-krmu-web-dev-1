@@ -1,0 +1,338 @@
+:root {
+    --color-primary: #e84a5f; /* Example: A reddish color */
+    --color-secondary: #3c3c3c;
+    --color-background: #f8f8f8;
+    --color-text: #222;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --font-family: 'Roboto', sans-serif;
+    font-size: 16px; /* Base for rem units [cite: 52] */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: #fff;
+}
+
+/* Base Buttons & Links */
+.btn-cta, .btn-login, .btn-subscribe {
+    display: inline-block;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background-color: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: background-color 0.25s ease; /* Hover effect [cite: 56] */
+}
+
+.btn-cta:hover, .btn-login:hover, .btn-subscribe:hover {
+    background-color: #d13d4f; /* Slightly darker */
+}
+
+/* 2. Header & Navigation (Using Flexbox) */
+header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.header-content {
+    display: flex; /* Flexbox for alignment  */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+}
+
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    max-width: 400px;
+    margin: 0 var(--spacing-lg);
+}
+
+.search-bar input {
+    padding: var(--spacing-sm);
+    flex-grow: 1;
+    border: 1px solid #ddd;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-bar button {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid #ddd;
+    border-radius: 0 4px 4px 0;
+    background-color: var(--color-background);
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    margin-left: var(--spacing-md);
+    font-size: 1.1rem;
+}
+
+.header-nav .btn-login {
+    padding: 0.5rem 1rem;
+}
+
+/* 3. Hero Banner */
+.hero-banner {
+    background: url('images/hero-bg.jpg') center/cover no-repeat; /* Replace with your image */
+    background-color: #222;
+    color: white;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text {
+    padding: var(--spacing-lg);
+    max-width: 800px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+/* 4. Flash Sale Banner */
+.flash-sale-banner {
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-md);
+    font-weight: 700;
+}
+
+/* 5. Main Content Layout (Using Flexbox for Sidebar/Grid split) */
+.product-listing-container {
+    display: flex; /* Flexbox for main content layout  */
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filter-sidebar {
+    flex: 0 0 250px; /* Fixed width sidebar */
+    padding: var(--spacing-md);
+    border-right: 1px solid #eee;
+}
+
+.filter-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.filter-group h4 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.product-grid {
+    flex-grow: 1;
+    display: grid; /* CSS Grid for card layouts  */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.category-card, .product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    background-color: white;
+    transition: transform 0.2s ease;
+}
+
+.category-card:hover, .product-card:hover {
+    transform: translateY(-5px); /* Hover effect [cite: 56] */
+}
+
+/* Placeholder for Images */
+.product-card img, .category-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-info {
+    padding: var(--spacing-md);
+}
+
+.price {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* 6. Testimonials Section (Using Flexbox) */
+.testimonials {
+    text-align: center;
+    padding: var(--spacing-lg);
+    background-color: var(--color-background);
+}
+
+.testimonial-cards {
+    display: flex; /* Flexbox for card alignment  */
+    justify-content: center;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.testimonial-card {
+    flex: 1;
+    max-width: 350px;
+    padding: var(--spacing-lg);
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* 7. Newsletter Signup */
+.newsletter-signup {
+    background-color: var(--color-secondary);
+    color: white;
+    padding: var(--spacing-lg);
+    text-align: center;
+}
+
+.signup-form {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-md);
+}
+
+.signup-form input {
+    padding: var(--spacing-md);
+    border: none;
+    border-radius: 4px 0 0 4px;
+    width: 300px;
+}
+
+.btn-subscribe {
+    border-radius: 0 4px 4px 0;
+}
+
+/* 8. Footer */
+footer {
+    background-color: #1a1a1a;
+    color: #bbb;
+    padding: var(--spacing-lg) 0;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+.footer-col h3 {
+    color: white;
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-col ul {
+    list-style: none; /* Lists are a requirement [cite: 18] */
+}
+
+.footer-col a {
+    color: #bbb;
+    text-decoration: none;
+    display: block;
+    margin-bottom: var(--spacing-sm);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid #333;
+    margin-top: var(--spacing-lg);
+}
+
+/* 9. Responsiveness (Media Queries) */
+/* Tablet Breakpoint (~768px) [cite: 53] */
+@media (max-width: 768px) {
+    .header-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search-bar {
+        order: 3; /* Move search below logo/nav */
+        flex-basis: 100%;
+        margin-top: var(--spacing-md);
+    }
+
+    .product-listing-container {
+        flex-direction: column; /* Stack sidebar and grid [cite: 53] */
+    }
+
+    .filter-sidebar {
+        flex: auto;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .testimonial-cards {
+        flex-direction: column; /* Stack testimonial cards */
+        align-items: center;
+    }
+    
+    .footer-columns {
+        flex-wrap: wrap;
+    }
+
+    .footer-col {
+        flex-basis: 50%;
+        margin-bottom: var(--spacing-lg);
+    }
+}
+
+/* Mobile Breakpoint (≤480px) [cite: 53] */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+    }
+    
+    .footer-col {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    
+    .footer-col ul {
+        padding-left: 0;
+    }
+}
